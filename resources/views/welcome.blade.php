@@ -453,27 +453,28 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 20px;
-            background: #1a1a1a;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 12px 22px;
+            background: #f5b800;
+            border: none;
             border-radius: 50px;
-            color: #fff;
+            color: #000;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 20px rgba(245, 184, 0, 0.35);
         }
 
         .help-btn:hover {
-            background: #222;
+            background: #ffcc33;
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 30px rgba(245, 184, 0, 0.45);
         }
 
         .help-btn svg {
             width: 18px;
             height: 18px;
+            stroke: #000;
         }
 
         /* ===== MOBILE HAMBURGER ===== */
@@ -1324,6 +1325,460 @@
                 min-height: 260px;
             }
         }
+
+        /* ===== RASH GUARDS SECTION ===== */
+        .rashguards-section {
+            background: #000;
+            padding: 60px 24px 75px;
+        }
+
+        .rashguards-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .rashguards-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            gap: 20px;
+        }
+
+        .rashguards-header-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.2px;
+            line-height: 1.4;
+        }
+
+        .rashguards-view-all {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .rashguards-view-all:hover {
+            opacity: 0.85;
+        }
+
+        .rashguards-arrow-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #181818;
+            color: #fff;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .rashguards-view-all:hover .rashguards-arrow-circle {
+            background: #252525;
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(2px);
+        }
+
+        .rashguards-arrow-circle svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2.2;
+        }
+
+        .rashguards-scroll {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 16px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            cursor: grab;
+        }
+
+        .rashguards-scroll:active {
+            cursor: grabbing;
+        }
+
+        .rashguards-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .rash-card {
+            flex: 0 0 280px;
+            background: transparent;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .rash-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .rash-card-img {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1280 / 1500;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .rash-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .rash-card:hover .rash-card-img img {
+            transform: scale(1.03);
+        }
+
+        .rash-card-info {
+            padding: 14px 2px 6px;
+        }
+
+        .rash-card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .rash-card-name {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.35;
+            flex: 1;
+        }
+
+        .rash-card-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+            padding-top: 1px;
+        }
+
+        .rash-card-rating .star {
+            color: #f5b800;
+            font-size: 13px;
+        }
+
+        .rash-card-prices {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rash-card-sale-price {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #f5b800;
+        }
+
+        .rash-card-original-price {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: line-through;
+        }
+
+        @media (max-width: 768px) {
+            .rashguards-section {
+                padding: 45px 16px 50px;
+            }
+
+            .rashguards-header {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .rashguards-header-title {
+                font-size: 14px;
+            }
+
+            .rash-card {
+                flex: 0 0 220px;
+            }
+        }
+
+        /* ===== CONVERSATION BANNER ===== */
+        .conversation-banner {
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            min-height: 450px;
+            max-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .conversation-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .conversation-bg img,
+        .conversation-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .conversation-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .conversation-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .play-btn {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-btn:hover {
+            transform: scale(1.05);
+            background: #fff;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .play-btn svg {
+            width: 28px;
+            height: 28px;
+            color: #000;
+            margin-left: 4px;
+        }
+
+        .conversation-content h3 {
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .conversation-content p {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .conversation-banner {
+                height: 50vh;
+                min-height: 350px;
+            }
+            .play-btn {
+                width: 56px;
+                height: 56px;
+                margin-bottom: 16px;
+            }
+            .play-btn svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        /* ===== INSTAGRAM SECTION ===== */
+        .instagram-section {
+            background: #000;
+            padding: 80px 24px 90px;
+            text-align: center;
+        }
+
+        .instagram-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: #f5b800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .instagram-header p {
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .instagram-scroll-wrap {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .instagram-scroll {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 16px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .instagram-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .insta-card {
+            position: relative;
+            flex: 0 0 calc(20% - 13px);
+            min-width: 240px;
+            aspect-ratio: 1 / 1;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #111;
+            display: block;
+        }
+
+        .insta-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .insta-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .insta-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0);
+            transition: background 0.3s ease;
+            z-index: 1;
+        }
+        
+        .insta-card:hover::after {
+            background: rgba(0,0,0,0.2);
+        }
+
+        .insta-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 24px;
+            height: 24px;
+            z-index: 2;
+            color: #fff;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .instagram-next-btn,
+        .instagram-prev-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 5;
+            transition: all 0.3s ease;
+        }
+
+        .instagram-next-btn {
+            right: -20px;
+        }
+
+        .instagram-prev-btn {
+            left: -20px;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .instagram-next-btn:hover,
+        .instagram-prev-btn:hover {
+            background: #f5b800;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .instagram-next-btn svg,
+        .instagram-prev-btn svg {
+            width: 20px;
+            height: 20px;
+            color: #000;
+        }
+
+        @media (max-width: 1200px) {
+            .instagram-next-btn {
+                right: 10px;
+            }
+            .instagram-prev-btn {
+                left: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .insta-card {
+                flex: 0 0 260px;
+            }
+            .instagram-next-btn,
+            .instagram-prev-btn {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1737,6 +2192,190 @@
         </div>
     </section>
 
+    <!-- Competition-ready Rash Guards Section -->
+    @php
+        $rashGuards = [
+            [
+                'name' => 'Standard White Short Sleeve No-Gi Mens BJJ Rash Guard',
+                'image' => 'images/rash-guard-white.jpg',
+                'rating' => '4.9',
+                'sale_price' => '$15.05',
+                'orig_price' => '$18.81',
+                'link' => '#',
+            ],
+            [
+                'name' => 'Standard Gray Short Sleeve No-Gi Mens BJJ Rash Guard',
+                'image' => 'images/rash-guard-gray.jpg',
+                'rating' => '4.9',
+                'sale_price' => '$15.05',
+                'orig_price' => '$18.81',
+                'link' => '#',
+            ],
+            [
+                'name' => 'Standard Brown Short Sleeve No-Gi Mens BJJ Rash Guard',
+                'image' => 'images/rash-guard-brown.jpg',
+                'rating' => '5.0',
+                'sale_price' => '$15.05',
+                'orig_price' => '$18.81',
+                'link' => '#',
+            ],
+            [
+                'name' => 'Standard Purple Short Sleeve No-Gi Mens BJJ Rash Guard',
+                'image' => 'images/rash-guard-purple.jpg',
+                'rating' => '5.0',
+                'sale_price' => '$15.05',
+                'orig_price' => '$18.81',
+                'link' => '#',
+            ],
+            [
+                'name' => 'Standard Blue Short Sleeve No-Gi Mens BJJ Rash Guard',
+                'image' => 'images/rash-guard-blue.jpg',
+                'rating' => '4.9',
+                'sale_price' => '$15.05',
+                'orig_price' => '$18.81',
+                'link' => '#',
+            ],
+            [
+                'name' => 'Standard Black Short Sleeve No-Gi Mens BJJ Rash Guard',
+                'image' => 'images/rash-guard-black.jpg',
+                'rating' => '4.9',
+                'sale_price' => '$15.05',
+                'orig_price' => '$18.81',
+                'link' => '#',
+            ],
+        ];
+    @endphp
+
+    <section class="rashguards-section" id="rashguards-section">
+        <div class="rashguards-inner">
+            <div class="rashguards-header">
+                <p class="rashguards-header-title">Competition-ready rash guards for No-Gi grappling, training, and tournaments.</p>
+                <a href="#" class="rashguards-view-all" id="rashguards-view-all">
+                    <span>View all</span>
+                    <span class="rashguards-arrow-circle" id="rashguards-scroll-btn" title="Next items">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="rashguards-scroll" id="rashguards-scroll">
+                @foreach($rashGuards as $product)
+                    <a href="{{ $product['link'] }}" class="rash-card">
+                        <div class="rash-card-img">
+                            <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}" loading="lazy">
+                        </div>
+                        <div class="rash-card-info">
+                            <div class="rash-card-top">
+                                <span class="rash-card-name">{{ $product['name'] }}</span>
+                                <span class="rash-card-rating">{{ $product['rating'] }} <span class="star">★</span></span>
+                            </div>
+                            <div class="rash-card-prices">
+                                <span class="rash-card-sale-price">{{ $product['sale_price'] }}</span>
+                                <span class="rash-card-original-price">{{ $product['orig_price'] }}</span>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversation Banner -->
+    <section class="conversation-banner">
+        <div class="conversation-bg">
+            <video autoplay muted loop playsinline preload="auto">
+                <source src="{{ asset('videos/mckenzie-dern-interview.mp4') }}" type="video/mp4">
+                <img src="{{ asset('images/mckenzie-dern-mats.jpg') }}" alt="Mckenzie Dern" loading="lazy">
+            </video>
+        </div>
+        <div class="conversation-overlay"></div>
+        <div class="conversation-content">
+            <button class="play-btn" aria-label="Play Conversation">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </button>
+            <h3>A Conversation with Mckenzie Dern</h3>
+            <p>UFC Fighter & BJJ World Champion</p>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section">
+        <div class="instagram-header">
+            <h2>Follow us on Instagram</h2>
+            <p>Train smarter. Stay connected. Discover what's next in BJJ & MMA.</p>
+        </div>
+        <div class="instagram-scroll-wrap">
+            <div class="instagram-scroll" id="instagram-scroll">
+                <!-- Insta 1 -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-1.jpg') }}" alt="Instagram post" loading="lazy">
+                </a>
+                <!-- Insta 2 (Video) -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-2.jpg') }}" alt="Instagram post" loading="lazy">
+                    <svg class="insta-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                    </svg>
+                </a>
+                <!-- Insta 3 -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-3.jpg') }}" alt="Instagram post" loading="lazy">
+                </a>
+                <!-- Insta 4 -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-4.jpg') }}" alt="Instagram post" loading="lazy">
+                </a>
+                <!-- Insta 5 (Carousel) -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-5.jpg') }}" alt="Instagram post" loading="lazy">
+                    <svg class="insta-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22 4h-2V2h-2v2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V8h2V6h-2V4zm-4 16H4V6h14v14zM20 18h2v-2h-2v2zm0-4h2v-2h-2v2zm0-4h2V8h-2v2z"/>
+                    </svg>
+                </a>
+                <!-- Insta 6 -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-1.jpg') }}" alt="Instagram post" loading="lazy">
+                </a>
+                <!-- Insta 7 (Video) -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-2.jpg') }}" alt="Instagram post" loading="lazy">
+                    <svg class="insta-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                    </svg>
+                </a>
+                <!-- Insta 8 -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-3.jpg') }}" alt="Instagram post" loading="lazy">
+                </a>
+                <!-- Insta 9 -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-4.jpg') }}" alt="Instagram post" loading="lazy">
+                </a>
+                <!-- Insta 10 (Carousel) -->
+                <a href="#" class="insta-card" aria-label="View Instagram Post">
+                    <img src="{{ asset('images/insta-5.jpg') }}" alt="Instagram post" loading="lazy">
+                    <svg class="insta-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22 4h-2V2h-2v2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V8h2V6h-2V4zm-4 16H4V6h14v14zM20 18h2v-2h-2v2zm0-4h2v-2h-2v2zm0-4h2V8h-2v2z"/>
+                    </svg>
+                </a>
+            </div>
+            <button class="instagram-prev-btn" id="instagram-prev-btn" aria-label="Previous Instagram Posts">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="instagram-next-btn" id="instagram-next-btn" aria-label="Next Instagram Posts">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
     <!-- Help Floating Button -->
     <button class="help-btn" id="help-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1939,6 +2578,100 @@
             }, { threshold: 0.25 });
 
             videoObserver.observe(videoBanner);
+        }
+
+        // ===== RASH GUARDS SCROLL & CONTROLS =====
+        const rashScroll = document.getElementById('rashguards-scroll');
+        const rashScrollBtn = document.getElementById('rashguards-scroll-btn');
+
+        if (rashScroll) {
+            // Initial subtle offset so previous item peeks on the left exactly matching screenshot
+            if (window.innerWidth > 900) {
+                rashScroll.scrollLeft = 140;
+            }
+
+            if (rashScrollBtn) {
+                rashScrollBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    rashScroll.scrollBy({ left: 300, behavior: 'smooth' });
+                });
+            }
+
+            // Drag to scroll
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            rashScroll.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - rashScroll.offsetLeft;
+                scrollLeft = rashScroll.scrollLeft;
+            });
+            rashScroll.addEventListener('mouseleave', () => { isDown = false; });
+            rashScroll.addEventListener('mouseup', () => { isDown = false; });
+            rashScroll.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - rashScroll.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                rashScroll.scrollLeft = scrollLeft - walk;
+            });
+        }
+
+        // ===== INSTAGRAM SCROLL =====
+        const instaScroll = document.getElementById('instagram-scroll');
+        const instaNextBtn = document.getElementById('instagram-next-btn');
+        const instaPrevBtn = document.getElementById('instagram-prev-btn');
+
+        if (instaScroll && instaNextBtn && instaPrevBtn) {
+            const updateInstaButtons = () => {
+                if (instaScroll.scrollLeft > 10) {
+                    instaPrevBtn.style.opacity = '1';
+                    instaPrevBtn.style.pointerEvents = 'auto';
+                } else {
+                    instaPrevBtn.style.opacity = '0';
+                    instaPrevBtn.style.pointerEvents = 'none';
+                }
+
+                if (instaScroll.scrollLeft >= instaScroll.scrollWidth - instaScroll.clientWidth - 10) {
+                    instaNextBtn.style.opacity = '0';
+                    instaNextBtn.style.pointerEvents = 'none';
+                } else {
+                    instaNextBtn.style.opacity = '1';
+                    instaNextBtn.style.pointerEvents = 'auto';
+                }
+            };
+
+            instaNextBtn.addEventListener('click', () => {
+                instaScroll.scrollBy({ left: instaScroll.clientWidth * 0.8, behavior: 'smooth' });
+            });
+
+            instaPrevBtn.addEventListener('click', () => {
+                instaScroll.scrollBy({ left: -(instaScroll.clientWidth * 0.8), behavior: 'smooth' });
+            });
+
+            instaScroll.addEventListener('scroll', updateInstaButtons);
+            
+            // Drag to scroll for instagram
+            let isInstaDown = false;
+            let startInstaX;
+            let scrollInstaLeft;
+
+            instaScroll.addEventListener('mousedown', (e) => {
+                isInstaDown = true;
+                startInstaX = e.pageX - instaScroll.offsetLeft;
+                scrollInstaLeft = instaScroll.scrollLeft;
+            });
+            instaScroll.addEventListener('mouseleave', () => { isInstaDown = false; });
+            instaScroll.addEventListener('mouseup', () => { isInstaDown = false; });
+            instaScroll.addEventListener('mousemove', (e) => {
+                if (!isInstaDown) return;
+                e.preventDefault();
+                const x = e.pageX - instaScroll.offsetLeft;
+                const walk = (x - startInstaX) * 1.5;
+                instaScroll.scrollLeft = scrollInstaLeft - walk;
+            });
         }
     </script>
 </body>
