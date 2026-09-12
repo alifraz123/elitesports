@@ -14,7 +14,9 @@ class AdminController extends Controller
 
     public function indexProducts(Request $request)
     {
-        $query = DB::table('products');
+        $query = DB::table('products')
+            ->leftJoin('categories', 'products.category_id', '=', 'categories.id')
+            ->select('products.*', 'categories.name as category_name');
 
         if ($request->has('in_stock')) {
             $query->where('in_stock', $request->in_stock == '1');
@@ -41,18 +43,107 @@ class AdminController extends Controller
             $query->where('colors', 'LIKE', '%' . $request->color . '%');
         }
 
-        $products = $query->orderBy('id', 'desc')->paginate(12)->withQueryString();
+        if ($request->filled('category')) {
+            $query->where('products.category_id', $request->category);
+        }
+
+        $products = $query->orderBy('products.id', 'desc')->paginate(12)->withQueryString();
 
         return view('admin.products.index', compact('products'));
     }
 
-    public function createCategory()
-    {
-        return view('admin.categories.create');
-    }
 
     public function createProduct()
     {
-        return view('admin.products.create');
+        $categories = DB::table('categories')->get();
+        $categoryOptions = $this->buildCategoryTree($categories);
+        return view('admin.products.create', compact('categoryOptions'));
+    }
+
+    public function storeProduct(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'price' => 'required|numeric',
+        ]);
+
+        $sizes = $request->input('sizes', []);
+        $colors = $request->input('colors', []);
+
+        DB::table('products')->insert([
+            'title' => $request->title,
+            'description' => $request->description,
+            'price' => $request->price,
+            'compare_at_price' => $request->compare_at_price,
+            'category_id' => $request->category_id,
+            'in_stock' => $request->has('in_stock') ? true : false,
+            'product_type' => $request->product_type,
+            'sizes' => json_encode($sizes),
+            'colors' => json_encode($colors),
+            'status' => $request->status ?? 'Active',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return redirect()->route('admin.products.index')->with('success', 'Product created successfully.');
+    }
+
+    public function editProduct($id)
+    {
+        $product = DB::table('products')->where('id', $id)->first();
+        if (!$product) abort(404);
+        
+        $categories = DB::table('categories')->get();
+        $categoryOptions = $this->buildCategoryTree($categories);
+        return view('admin.products.edit', compact('product', 'categoryOptions'));
+    }
+
+    public function updateProduct(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required',
+            'price' => 'required|numeric',
+        ]);
+
+        $sizes = $request->input('sizes', []);
+        $colors = $request->input('colors', []);
+
+        DB::table('products')->where('id', $id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'price' => $request->price,
+            'compare_at_price' => $request->compare_at_price,
+            'category_id' => $request->category_id,
+            'in_stock' => $request->has('in_stock') ? true : false,
+            'product_type' => $request->product_type,
+            'sizes' => json_encode($sizes),
+            'colors' => json_encode($colors),
+            'status' => $request->status ?? 'Active',
+            'updated_at' => now(),
+        ]);
+
+        return redirect()->route('admin.products.index')->with('success', 'Product updated successfully.');
+    }
+
+    public function destroyProduct($id)
+    {
+        DB::table('products')->where('id', $id)->delete();
+        return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully.');
+    }
+
+    private function buildCategoryTree($categories, $parentId = null, $prefix = '')
+    {
+        $tree = [];
+        foreach ($categories as $category) {
+            if ($category->parent_id == $parentId) {
+                $tree[] = [
+                    'id' => $category->id,
+                    'name' => $prefix . $category->name
+                ];
+                // Recursively get children
+                $tree = array_merge($tree, $this->buildCategoryTree($categories, $category->id, $prefix . $category->name . ' > '));
+            }
+        }
+        return $tree;
     }
 }

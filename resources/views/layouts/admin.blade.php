@@ -269,11 +269,11 @@
             </a>
             
             <div class="nav-label">Catalog</div>
-            <a href="{{ route('admin.products.create') }}" class="nav-item {{ request()->routeIs('admin.products.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.products.index') }}" class="nav-item {{ request()->routeIs('admin.products.*') ? 'active' : '' }}">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 16V4H4v12"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="4" x2="12" y2="16"/><path d="M4 20h16"/></svg>
                 Products
             </a>
-            <a href="{{ route('admin.categories.create') }}" class="nav-item {{ request()->routeIs('admin.categories.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.categories.index') }}" class="nav-item {{ request()->routeIs('admin.categories.*') ? 'active' : '' }}">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
                 Categories
             </a>
