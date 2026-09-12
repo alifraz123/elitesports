@@ -1,133 +1,1945 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Premium BJJ Gis, Rash Guards, No-Gi Apparel & Training Gear. Trusted by athletes worldwide for daily rolling and competition.">
 
-        <title>Laravel</title>
+    <title>Elite Sports — Premium BJJ Gear</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+        html {
+            scroll-behavior: smooth;
+        }
 
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
 
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
+        ul {
+            list-style: none;
+        }
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
+        /* ===== YELLOW ACCENT BAR ===== */
+        .accent-bar {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #e8a200, #f5b800, #ffc929, #f5b800, #e8a200);
+        }
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
+        .navbar-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: 64px;
+        }
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
+        /* Nav left - menu items */
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex: 1;
+        }
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
+        .nav-item {
+            position: relative;
+        }
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+        .nav-item > a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 20px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
 
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
+        .nav-item > a:hover {
+            color: #f5b800;
+        }
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
+        .nav-item > a .chevron {
+            width: 10px;
+            height: 10px;
+            transition: transform 0.25s ease;
+        }
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
+        .nav-item:hover > a .chevron {
+            transform: rotate(180deg);
+        }
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
+        /* Nav center - logo */
+        .nav-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            padding: 0 40px;
+        }
 
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
+        .logo-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: #f5b800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-style: italic;
+            line-height: 1;
+        }
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        /* Nav right - utility icons */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .nav-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            color: #fff;
+        }
+
+        .nav-icon-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-icon-btn svg {
+            width: 22px;
+            height: 22px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.8;
+        }
+
+        .cart-btn {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 16px;
+            height: 16px;
+            background: #f5b800;
+            color: #000;
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== DROPDOWN MENUS ===== */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 260px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 2px solid #f5b800;
+            border-radius: 0 0 8px 8px;
+            padding: 16px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.25s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-header {
+            padding: 6px 24px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #f5b800;
+        }
+
+        .dropdown a {
+            display: flex;
+            align-items: center;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown a:hover {
+            color: #fff;
+            background: rgba(245, 184, 0, 0.08);
+            padding-left: 30px;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 8px 24px;
+        }
+
+        .dropdown a .arrow {
+            margin-left: auto;
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: all 0.2s ease;
+            width: 14px;
+            height: 14px;
+        }
+
+        .dropdown a:hover .arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ===== MEGA DROPDOWN ===== */
+        .mega-dropdown {
+            position: absolute;
+            top: 100%;
+            left: -100px;
+            min-width: 600px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 2px solid #f5b800;
+            border-radius: 0 0 8px 8px;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.25s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+        }
+
+        .nav-item:hover .mega-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-col-header {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #f5b800;
+            padding: 6px 12px 10px;
+        }
+
+        .mega-dropdown a {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .mega-dropdown a:hover {
+            color: #fff;
+            background: rgba(245, 184, 0, 0.08);
+        }
+
+        /* ===== HERO BANNER ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 80vh;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.5) 30%,
+                rgba(0, 0, 0, 0.1) 60%,
+                rgba(0, 0, 0, 0) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px 50px;
+            width: 100%;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: rgba(245, 184, 0, 0.15);
+            border: 1px solid rgba(245, 184, 0, 0.3);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #f5b800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 620px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 30px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary {
+            background: #f5b800;
+            color: #000;
+            border-color: #f5b800;
+        }
+
+        .btn-primary:hover {
+            background: #ffcc33;
+            border-color: #ffcc33;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 184, 0, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== HELP BUTTON ===== */
+        .help-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .help-btn:hover {
+            background: #222;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .help-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ===== MOBILE HAMBURGER ===== */
+        .mobile-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .mobile-toggle svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .nav-item > a {
+                padding: 20px 10px;
+                font-size: 13px;
+            }
+            .nav-center {
+                padding: 0 20px;
+            }
+            .mega-dropdown {
+                min-width: 480px;
+                left: -50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-left {
+                display: none;
+                position: fixed;
+                top: 68px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #111;
+                flex-direction: column;
+                gap: 0;
+                padding: 16px 0;
+                overflow-y: auto;
+                z-index: 999;
+            }
+
+            .nav-left.active {
+                display: flex;
+            }
+
+            .nav-item > a {
+                padding: 16px 24px;
+                font-size: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .dropdown, .mega-dropdown {
+                position: static;
+                min-width: 100%;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                border: none;
+                border-top: none;
+                border-radius: 0;
+                padding: 0 0 8px;
+                box-shadow: none;
+                display: none;
+                grid-template-columns: 1fr;
+                background: #0a0a0a;
+            }
+
+            .nav-item:hover .dropdown,
+            .nav-item:hover .mega-dropdown {
+                display: block;
+            }
+
+            .navbar-inner {
+                height: 60px;
+            }
+
+            .hero {
+                min-height: 60vh;
+            }
+
+            .hero-content {
+                padding: 40px 20px 36px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo-text {
+                font-size: 24px;
+            }
+        }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 40px 24px;
+        }
+
+        .stats-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .stat-number {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .stat-number .stat-suffix {
+            color: #f5b800;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+            margin-top: 4px;
+        }
+
+        .stat-text-highlight {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            color: #f5b800;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        /* Stat fade-in animation */
+        .stat-item {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-item:nth-child(1) { transition-delay: 0.1s; }
+        .stat-item:nth-child(2) { transition-delay: 0.25s; }
+        .stat-item:nth-child(3) { transition-delay: 0.4s; }
+
+        /* ===== PRODUCT CATEGORY GRID ===== */
+        .category-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 24px 60px;
+        }
+
+        .category-grid-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 16px;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #111;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.7);
+        }
+
+        .category-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 30px;
+            gap: 12px;
+            z-index: 1;
+        }
+
+        .category-card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .category-card-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px 22px;
+            background: #f5b800;
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .category-card-btn:hover {
+            background: #ffcc33;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(245, 184, 0, 0.3);
+        }
+
+        /* Large card spans both rows on the left */
+        .category-card--large {
+            grid-row: 1 / 3;
+        }
+
+        .category-card--large img {
+            min-height: 420px;
+        }
+
+        .category-card--small img {
+            min-height: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-inner {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .stat-item:not(:last-child)::after {
+                width: 60px;
+                height: 1px;
+                right: auto;
+                bottom: -12px;
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .category-grid-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .category-card--large {
+                grid-row: auto;
+            }
+
+            .category-card--large img,
+            .category-card--small img {
+                min-height: 220px;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content > * {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+        .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+        .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+
+        /* ===== ABOUT / BUILT FOR BJJ SECTION ===== */
+        .about-bjj {
+            background: #000;
+            padding: 70px 24px 80px;
+            text-align: center;
+        }
+
+        .about-bjj-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .about-bjj-tag {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #f5b800;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .about-bjj h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: #fff;
+            font-style: italic;
+            line-height: 1.25;
+            margin-bottom: 28px;
+            letter-spacing: -0.3px;
+        }
+
+        .about-bjj p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-bjj p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-bjj a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(255, 255, 255, 0.4);
+            transition: color 0.2s ease, text-decoration-color 0.2s ease;
+        }
+
+        .about-bjj a:hover {
+            color: #f5b800;
+            text-decoration-color: #f5b800;
+        }
+
+        /* Fade-in on scroll for about section */
+        .about-bjj-inner > * {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .about-bjj-inner.visible > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-bjj-inner.visible > *:nth-child(1) { transition-delay: 0.05s; }
+        .about-bjj-inner.visible > *:nth-child(2) { transition-delay: 0.15s; }
+        .about-bjj-inner.visible > *:nth-child(3) { transition-delay: 0.25s; }
+        .about-bjj-inner.visible > *:nth-child(4) { transition-delay: 0.35s; }
+
+        /* ===== BEST SELLING PRODUCTS SECTION ===== */
+        .products-section {
+            background: #000;
+            padding: 60px 24px 70px;
+        }
+
+        .products-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .products-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            gap: 20px;
+        }
+
+        .products-header-left h2 {
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+            font-weight: 800;
+            color: #fff;
+            font-style: italic;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .products-header-left p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        .view-all-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .view-all-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateX(3px);
+        }
+
+        .view-all-btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .view-all-btn:hover svg {
+            transform: translateX(3px);
+        }
+
+        /* Product cards scroll container */
+        .products-scroll {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 12px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .products-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-card {
+            flex: 0 0 280px;
+            background: transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-card-img {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #111;
+        }
+
+        .product-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-card-img img {
+            transform: scale(1.05);
+        }
+
+        .product-card-info {
+            padding: 14px 4px 8px;
+        }
+
+        .product-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .product-card-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.4;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-card-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            flex-shrink: 0;
+        }
+
+        .product-card-rating .star {
+            color: #f5b800;
+            font-size: 13px;
+        }
+
+        .product-card-prices {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-card-sale-price {
+            font-size: 15px;
+            font-weight: 700;
+            color: #f5b800;
+        }
+
+        .product-card-original-price {
+            font-size: 13px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.35);
+            text-decoration: line-through;
+        }
+
+        @media (max-width: 768px) {
+            .products-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .product-card {
+                flex: 0 0 220px;
+            }
+        }
+
+        /* ===== MATERIAL ADVANTAGE SECTION ===== */
+        .material-section {
+            background: #000;
+            padding: 80px 24px 90px;
+            overflow: hidden;
+        }
+
+        .material-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .material-image-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .material-image-wrap::before {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            background: radial-gradient(circle, rgba(245, 184, 0, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        .material-image {
+            position: relative;
+            z-index: 1;
+            width: 85%;
+            max-width: 400px;
+            border-radius: 14px;
+            overflow: hidden;
+            transform: rotate(-6deg);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.06);
+            transition: transform 0.5s ease;
+        }
+
+        .material-image:hover {
+            transform: rotate(-3deg) scale(1.03);
+        }
+
+        .material-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .material-content {
+            padding: 20px 0;
+        }
+
+        .material-tag {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #f5b800;
+            letter-spacing: 0.3px;
+            margin-bottom: 16px;
+        }
+
+        .material-content h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 800;
+            color: #fff;
+            font-style: italic;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+        }
+
+        .material-content p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.85;
+            max-width: 520px;
+        }
+
+        .material-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .material-nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .material-nav-btn:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .material-nav-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .material-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .material-image-wrap {
+                order: -1;
+            }
+
+            .material-image {
+                width: 70%;
+                transform: rotate(-4deg);
+            }
+
+            .material-content {
+                text-align: center;
+            }
+
+            .material-content p {
+                max-width: 100%;
+            }
+
+            .material-nav {
+                justify-content: center;
+            }
+        }
+
+        /* ===== VIDEO BANNER SECTION ===== */
+        .video-banner {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            min-height: 340px;
+            max-height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-banner-media {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .video-banner-media video,
+        .video-banner-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Ken Burns slow zoom animation on the image */
+        @keyframes kenBurns {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+            50% {
+                transform: scale(1.15) translate(-2%, -1%);
+            }
+            100% {
+                transform: scale(1) translate(0, 0);
+            }
+        }
+
+        .video-banner-animated-bg {
+            position: absolute;
+            inset: -5%;
+            z-index: 0;
+            animation: kenBurns 20s ease-in-out infinite;
+        }
+
+        .video-banner-animated-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* When real video is playing, hide the animated bg */
+        .video-banner.video-playing .video-banner-animated-bg {
+            display: none;
+        }
+
+        .video-banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .video-banner-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .video-banner-content h2 {
+            font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+            font-weight: 700;
+            color: #f5b800;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-banner-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            background: #f5b800;
+            color: #000;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: capitalize;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .video-banner-btn:hover {
+            background: #ffcc33;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 184, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .video-banner {
+                height: 40vh;
+                min-height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Yellow accent stripe -->
+    <div class="accent-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="main-navbar">
+        <div class="navbar-inner">
+
+            <!-- Mobile hamburger -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+
+            <!-- Left: Navigation Menu Items -->
+            <div class="nav-left" id="nav-menu">
+
+                <!-- Men -->
+                <div class="nav-item">
+                    <a href="#">
+                        Men
+                        <svg class="chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 3.5L5 6.5L8 3.5"/>
+                        </svg>
+                    </a>
+                    <div class="mega-dropdown">
+                        <div>
+                            <div class="mega-col-header">Gi Collection</div>
+                            <a href="#">BJJ Gis</a>
+                            <a href="#">Lightweight Gis</a>
+                            <a href="#">Competition Gis</a>
+                            <a href="#">Gi Pants</a>
+                        </div>
+                        <div>
+                            <div class="mega-col-header">No-Gi</div>
+                            <a href="#">Rash Guards</a>
+                            <a href="#">Fight Shorts</a>
+                            <a href="#">Spats</a>
+                            <a href="#">Compression</a>
+                        </div>
+                        <div>
+                            <div class="mega-col-header">Accessories</div>
+                            <a href="#">Belts</a>
+                            <a href="#">Mouth Guards</a>
+                            <a href="#">Ear Guards</a>
+                            <a href="#">Gear Bags</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm sm:text-left">
-                        &nbsp;
+                <!-- Women -->
+                <div class="nav-item">
+                    <a href="#">
+                        Women
+                        <svg class="chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 3.5L5 6.5L8 3.5"/>
+                        </svg>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-header">Shop Women's</div>
+                        <a href="#">BJJ Gis <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Rash Guards <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Fight Shorts <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Spats <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#">No-Gi Apparel <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Accessories <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
                     </div>
+                </div>
 
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <!-- Kids -->
+                <div class="nav-item">
+                    <a href="#">
+                        Kids
+                        <svg class="chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 3.5L5 6.5L8 3.5"/>
+                        </svg>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-header">Shop Kids'</div>
+                        <a href="#">Kids BJJ Gis <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Kids Rash Guards <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Kids Shorts <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Kids Belts <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
                     </div>
+                </div>
+
+                <!-- Dummies -->
+                <div class="nav-item">
+                    <a href="#">
+                        Dummies
+                        <svg class="chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 3.5L5 6.5L8 3.5"/>
+                        </svg>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-header">Training Dummies</div>
+                        <a href="#">Grappling Dummies <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">MMA Dummies <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Throwing Dummies <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                        <a href="#">Punching Bags <svg class="arrow" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Gear -->
+                <div class="nav-item">
+                    <a href="#">
+                        Gear
+                        <svg class="chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 3.5L5 6.5L8 3.5"/>
+                        </svg>
+                    </a>
+                    <div class="mega-dropdown">
+                        <div>
+                            <div class="mega-col-header">Protection</div>
+                            <a href="#">Boxing Gloves</a>
+                            <a href="#">MMA Gloves</a>
+                            <a href="#">Headgear</a>
+                            <a href="#">Shin Guards</a>
+                        </div>
+                        <div>
+                            <div class="mega-col-header">Equipment</div>
+                            <a href="#">Focus Mitts</a>
+                            <a href="#">Thai Pads</a>
+                            <a href="#">Heavy Bags</a>
+                            <a href="#">Jump Ropes</a>
+                        </div>
+                        <div>
+                            <div class="mega-col-header">Essentials</div>
+                            <a href="#">Gym Bags</a>
+                            <a href="#">Wraps</a>
+                            <a href="#">Mouth Guards</a>
+                            <a href="#">Tape & First Aid</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wholesale -->
+                <div class="nav-item">
+                    <a href="#">Wholesale</a>
+                </div>
+            </div>
+
+            <!-- Center: Logo -->
+            <a href="/" class="nav-center">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                        <path d="M8 8L20 4L32 8V20L20 36L8 20V8Z" fill="#f5b800" stroke="#f5b800" stroke-width="1"/>
+                        <path d="M14 14L20 10L26 14V22L20 30L14 22V14Z" fill="#000" stroke="#000" stroke-width="0.5"/>
+                        <path d="M18 17L20 15L22 17V21L20 25L18 21V17Z" fill="#f5b800"/>
+                    </svg>
+                    <span class="logo-text">ELITE</span>
+                </div>
+            </a>
+
+            <!-- Right: Utility Icons -->
+            <div class="nav-right">
+                <!-- Search -->
+                <button class="nav-icon-btn" id="search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+
+                <!-- Account -->
+                <button class="nav-icon-btn" id="account-btn" aria-label="Account">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </button>
+
+                <!-- Cart -->
+                <button class="nav-icon-btn cart-btn" id="cart-btn" aria-label="Cart">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 01-8 0"/>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="hero-banner">
+        <div class="hero-bg">
+            <img src="{{ asset('images/hero-banner.jpg') }}" alt="BJJ athletes training with premium gear" loading="eager">
+            <div class="hero-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+            <span class="hero-tag">New Collection 2024</span>
+            <h1>Premium BJJ Gear</h1>
+            <p>Trusted by BJJ athletes worldwide for premium BJJ Gis, rash guards, No-Gi apparel, and training gear designed for daily rolling and competition.</p>
+            <div class="hero-actions">
+                <a href="#" class="btn btn-primary" id="shop-gis-btn">Shop BJJ Gis</a>
+                <a href="#" class="btn btn-outline" id="shop-nogi-btn">Shop No-Gi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar" id="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <div class="stat-number" data-count="1000000" data-format="comma">0</div>
+                <div class="stat-label">Athletes Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="20000" data-suffix="+" data-format="comma">0</div>
+                <div class="stat-label">Five Star Reviews</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-text-highlight">IBJJF</div>
+                <div class="stat-label">Approved</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Category Grid -->
+    <section class="category-grid" id="category-grid">
+        <div class="category-grid-inner">
+            <!-- Large card - spans both rows -->
+            <div class="category-card category-card--large">
+                <img src="{{ asset('images/bjj-gi-category.jpg') }}" alt="World's Best BJJ Gis" loading="lazy">
+                <div class="category-card-overlay">
+                    <span class="category-card-title">World's Best BJJ Gis</span>
+                    <a href="#" class="category-card-btn">Shop</a>
+                </div>
+            </div>
+            <!-- Top right card -->
+            <div class="category-card category-card--small">
+                <img src="{{ asset('images/rash-guard-category.jpg') }}" alt="Jiu Jitsu Rash Guards" loading="lazy">
+                <div class="category-card-overlay">
+                    <span class="category-card-title">Jiu Jitsu Rash Guards</span>
+                    <a href="#" class="category-card-btn">Shop</a>
+                </div>
+            </div>
+            <!-- Bottom right card -->
+            <div class="category-card category-card--small">
+                <img src="{{ asset('images/bjj-shorts-category.jpg') }}" alt="BJJ Shorts" loading="lazy">
+                <div class="category-card-overlay">
+                    <span class="category-card-title">BJJ Shorts</span>
+                    <a href="#" class="category-card-btn">Shop</a>
                 </div>
             </div>
         </div>
-    </body>
+    </section>
+
+    <!-- Built for Brazilian Jiu Jitsu -->
+    <section class="about-bjj" id="about-bjj">
+        <div class="about-bjj-inner">
+            <span class="about-bjj-tag">Since 2015</span>
+            <h2>Built for Brazilian Jiu Jitsu</h2>
+            <p>Elite Sports was founded in 2015 with one goal: create high-quality Brazilian Jiu Jitsu gear that every athlete could afford. At the time, it was difficult to find a BJJ Gi that was durable, comfortable, IBJJF compliant, and accessible at a fair price. We believed every practitioner — from beginners to competitors — deserved premium BJJ gear built for daily training, hard rolling sessions, and tournament performance.</p>
+            <p>What started with a single BJJ Gi has grown into one of the most recognized brands in Brazilian Jiu Jitsu. Today, Elite Sports <a href="#">BJJ Gis</a>, <a href="#">rash guards</a>, <a href="#">belts</a>, and <a href="#">No-Gi</a> apparel are worn by athletes in academies and tournaments across the United States and around the world. Today, Elite Sports offers <a href="#">men's BJJ Gis</a>, <a href="#">women's BJJ Gis</a>, and <a href="#">kids BJJ Gis</a> designed for beginners, daily training, and tournament competition.</p>
+        </div>
+    </section>
+
+    <!-- Best Selling BJJ Gis -->
+    <section class="products-section" id="best-selling-gis">
+        <div class="products-inner">
+            <div class="products-header">
+                <div class="products-header-left">
+                    <h2>Best Selling BJJ Gis</h2>
+                    <p>Lightweight BJJ Gis for tournaments, training, and everyday rolling</p>
+                </div>
+                <a href="#" class="view-all-btn">
+                    View all
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="products-scroll">
+                <!-- Product 1 - White -->
+                <a href="#" class="product-card">
+                    <div class="product-card-img">
+                        <img src="{{ asset('images/gi-white.jpg') }}" alt="Core White Brazilian Jiu Jitsu Mens BJJ Gi" loading="lazy">
+                    </div>
+                    <div class="product-card-info">
+                        <div class="product-card-top">
+                            <span class="product-card-name">Core White Brazilian Jiu Jitsu Mens BJJ Gi</span>
+                            <span class="product-card-rating">4.9 <span class="star">★</span></span>
+                        </div>
+                        <div class="product-card-prices">
+                            <span class="product-card-sale-price">$47.05</span>
+                            <span class="product-card-original-price">$58.81</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Product 2 - Black -->
+                <a href="#" class="product-card">
+                    <div class="product-card-img">
+                        <img src="{{ asset('images/gi-black.jpg') }}" alt="Core Black Brazilian Jiu Jitsu Mens BJJ Gi" loading="lazy">
+                    </div>
+                    <div class="product-card-info">
+                        <div class="product-card-top">
+                            <span class="product-card-name">Core Black Brazilian Jiu Jitsu Mens BJJ Gi</span>
+                            <span class="product-card-rating">4.9 <span class="star">★</span></span>
+                        </div>
+                        <div class="product-card-prices">
+                            <span class="product-card-sale-price">$47.05</span>
+                            <span class="product-card-original-price">$58.81</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Product 3 - Blue -->
+                <a href="#" class="product-card">
+                    <div class="product-card-img">
+                        <img src="{{ asset('images/gi-blue.jpg') }}" alt="Core Blue Brazilian Jiu Jitsu Mens BJJ Gi" loading="lazy">
+                    </div>
+                    <div class="product-card-info">
+                        <div class="product-card-top">
+                            <span class="product-card-name">Core Blue Brazilian Jiu Jitsu Mens BJJ Gi</span>
+                            <span class="product-card-rating">4.9 <span class="star">★</span></span>
+                        </div>
+                        <div class="product-card-prices">
+                            <span class="product-card-sale-price">$47.05</span>
+                            <span class="product-card-original-price">$58.81</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Product 4 - Navy -->
+                <a href="#" class="product-card">
+                    <div class="product-card-img">
+                        <img src="{{ asset('images/gi-navy.jpg') }}" alt="Core Navy Brazilian Jiu Jitsu Mens BJJ Gi" loading="lazy">
+                    </div>
+                    <div class="product-card-info">
+                        <div class="product-card-top">
+                            <span class="product-card-name">Core Navy Brazilian Jiu Jitsu Mens BJJ Gi</span>
+                            <span class="product-card-rating">4.9 <span class="star">★</span></span>
+                        </div>
+                        <div class="product-card-prices">
+                            <span class="product-card-sale-price">$47.05</span>
+                            <span class="product-card-original-price">$58.81</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Product 5 - Grey -->
+                <a href="#" class="product-card">
+                    <div class="product-card-img">
+                        <img src="{{ asset('images/gi-grey.jpg') }}" alt="Core Grey Brazilian Jiu Jitsu Mens BJJ Gi" loading="lazy">
+                    </div>
+                    <div class="product-card-info">
+                        <div class="product-card-top">
+                            <span class="product-card-name">Core Grey Brazilian Jiu Jitsu Mens BJJ Gi</span>
+                            <span class="product-card-rating">4.9 <span class="star">★</span></span>
+                        </div>
+                        <div class="product-card-prices">
+                            <span class="product-card-sale-price">$47.05</span>
+                            <span class="product-card-original-price">$58.81</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Material Advantage -->
+    <section class="material-section" id="material-advantage">
+        <div class="material-inner">
+            <div class="material-image-wrap">
+                <div class="material-image" id="material-slide-img">
+                    <img src="{{ asset('images/pearl-weave-fabric.jpg') }}" alt="Pearl Weave Fabric close-up texture">
+                </div>
+            </div>
+            <div class="material-content">
+                <span class="material-tag" id="material-slide-tag">The Material Advantage</span>
+                <h2 id="material-slide-title">Pearl Weave Fabric</h2>
+                <p id="material-slide-desc">Known for its lightweight feel and long-lasting durability, pearl weave fabric is the gold-standard for modern BJJ Gis. Its breathable construction helps athletes stay comfortable through hard rolling sessions, training, and tournament competition.</p>
+                <div class="material-nav">
+                    <button class="material-nav-btn" id="material-prev" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <button class="material-nav-btn" id="material-next" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IBJJF Video Banner -->
+    <section class="video-banner" id="ibjjf-video-banner">
+        <!-- Animated background image (Ken Burns effect - always visible as base) -->
+        <div class="video-banner-animated-bg">
+            <img src="{{ asset('images/ibjjf-video-poster.jpg') }}" alt="IBJJF Approved Jiu Jitsu Gis">
+        </div>
+        <!-- Video overlay (hidden by default, shown when mp4 exists and loads) -->
+        <div class="video-banner-media" style="display:none;">
+            <video id="ibjjf-video" muted loop playsinline preload="auto">
+                <source src="{{ asset('videos/ibjjf-banner.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-banner-overlay"></div>
+        <div class="video-banner-content">
+            <h2>IBJJF Approved Jiu Jitsu Gis</h2>
+            <a href="#" class="video-banner-btn">Explore Kimonos</a>
+        </div>
+    </section>
+
+    <!-- Help Floating Button -->
+    <button class="help-btn" id="help-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        Help
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            // Toggle hamburger icon to X
+            const isActive = navMenu.classList.contains('active');
+            mobileToggle.innerHTML = isActive
+                ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>'
+                : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>';
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('main-navbar');
+            if (window.scrollY > 10) {
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.4)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // ===== COUNT-UP ANIMATION =====
+        function formatNumber(num) {
+            return num.toLocaleString('en-US');
+        }
+
+        function easeOutQuart(t) {
+            return 1 - Math.pow(1 - t, 4);
+        }
+
+        function animateCount(el) {
+            const target = parseInt(el.getAttribute('data-count'), 10);
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeOutQuart(progress);
+                const currentValue = Math.floor(easedProgress * target);
+
+                el.textContent = formatNumber(currentValue);
+                if (suffix) {
+                    el.innerHTML = formatNumber(currentValue) + '<span class="stat-suffix">' + suffix + '</span>';
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = formatNumber(target);
+                    if (suffix) {
+                        el.innerHTML = formatNumber(target) + '<span class="stat-suffix">' + suffix + '</span>';
+                    }
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Intersection Observer for stats
+        const statsBar = document.getElementById('stats-bar');
+        let statsAnimated = false;
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !statsAnimated) {
+                    statsAnimated = true;
+
+                    // Fade in stat items
+                    const statItems = statsBar.querySelectorAll('.stat-item');
+                    statItems.forEach(item => item.classList.add('visible'));
+
+                    // Animate numbers
+                    const counters = statsBar.querySelectorAll('.stat-number[data-count]');
+                    counters.forEach(counter => {
+                        setTimeout(() => animateCount(counter), 300);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        statsObserver.observe(statsBar);
+
+        // Intersection Observer for about section
+        const aboutInner = document.querySelector('.about-bjj-inner');
+        if (aboutInner) {
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        aboutInner.classList.add('visible');
+                        aboutObserver.unobserve(aboutInner);
+                    }
+                });
+            }, { threshold: 0.2 });
+            aboutObserver.observe(aboutInner);
+        }
+
+        // ===== MATERIAL ADVANTAGE SLIDER =====
+        const materialSlides = [
+            {
+                title: 'Pearl Weave Fabric',
+                desc: 'Known for its lightweight feel and long-lasting durability, pearl weave fabric is the gold-standard for modern BJJ Gis. Its breathable construction helps athletes stay comfortable through hard rolling sessions, training, and tournament competition.',
+                img: '{{ asset("images/pearl-weave-fabric.jpg") }}',
+                alt: 'Pearl Weave Fabric close-up texture'
+            },
+            {
+                title: 'Ripstop Pants',
+                desc: 'Our ripstop fabric is engineered with a reinforced grid pattern that prevents tears from spreading. Lighter than traditional Gi pants yet incredibly strong, ripstop is the preferred choice for athletes who demand maximum mobility and durability.',
+                img: '{{ asset("images/pearl-weave-fabric.jpg") }}',
+                alt: 'Ripstop fabric texture'
+            },
+            {
+                title: 'Preshrunk Cotton',
+                desc: 'Every Elite Sports Gi is pre-shrunk to ensure a consistent, reliable fit from day one. No more guessing on sizing — our fabrics are treated before construction so your Gi looks and feels the same after every wash.',
+                img: '{{ asset("images/pearl-weave-fabric.jpg") }}',
+                alt: 'Preshrunk cotton fabric texture'
+            }
+        ];
+
+        let currentMaterialSlide = 0;
+        const slideTitle = document.getElementById('material-slide-title');
+        const slideDesc = document.getElementById('material-slide-desc');
+        const slideImg = document.querySelector('#material-slide-img img');
+
+        function updateMaterialSlide(index) {
+            const slide = materialSlides[index];
+            // Fade out
+            slideTitle.style.opacity = '0';
+            slideDesc.style.opacity = '0';
+            slideImg.style.opacity = '0';
+            slideTitle.style.transform = 'translateY(10px)';
+            slideDesc.style.transform = 'translateY(10px)';
+
+            setTimeout(() => {
+                slideTitle.textContent = slide.title;
+                slideDesc.textContent = slide.desc;
+                slideImg.src = slide.img;
+                slideImg.alt = slide.alt;
+
+                // Fade in
+                slideTitle.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                slideDesc.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                slideImg.style.transition = 'opacity 0.4s ease';
+                slideTitle.style.opacity = '1';
+                slideDesc.style.opacity = '1';
+                slideImg.style.opacity = '1';
+                slideTitle.style.transform = 'translateY(0)';
+                slideDesc.style.transform = 'translateY(0)';
+            }, 300);
+        }
+
+        document.getElementById('material-next').addEventListener('click', () => {
+            currentMaterialSlide = (currentMaterialSlide + 1) % materialSlides.length;
+            updateMaterialSlide(currentMaterialSlide);
+        });
+
+        document.getElementById('material-prev').addEventListener('click', () => {
+            currentMaterialSlide = (currentMaterialSlide - 1 + materialSlides.length) % materialSlides.length;
+            updateMaterialSlide(currentMaterialSlide);
+        });
+
+        // ===== VIDEO BANNER - PLAY ON SCROLL =====
+        const ibjjfVideo = document.getElementById('ibjjf-video');
+        const videoBanner = document.getElementById('ibjjf-video-banner');
+        const videoMedia = ibjjfVideo ? ibjjfVideo.closest('.video-banner-media') : null;
+
+        if (ibjjfVideo && videoBanner) {
+            // Try to load and play the video when section is visible
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Try playing the video
+                        ibjjfVideo.play().then(() => {
+                            // Video loaded and playing - show video, add class to hide animated bg
+                            videoMedia.style.display = 'block';
+                            videoBanner.classList.add('video-playing');
+                        }).catch(() => {
+                            // Video can't play - keep the animated image
+                            videoMedia.style.display = 'none';
+                        });
+                    } else {
+                        ibjjfVideo.pause();
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            videoObserver.observe(videoBanner);
+        }
+    </script>
+</body>
 </html>
