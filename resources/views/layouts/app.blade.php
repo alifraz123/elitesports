@@ -268,7 +268,7 @@
         .mega-dropdown {
             position: absolute;
             top: 100%;
-            left: -100px;
+            left: 0;
             min-width: 600px;
             background: #111;
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -2680,7 +2680,7 @@
                 </svg>
             </button>
             <h2>Login</h2>
-            <form action="{{ route('login') }}" method="POST">
+            <form action="#" method="POST">
                 @csrf
                 <div class="login-form-group">
                     <input type="email" name="email" placeholder="E-mail" required>
