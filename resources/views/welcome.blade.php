@@ -1779,6 +1779,246 @@
                 display: none;
             }
         }
+
+        /* ===== FOOTER SECTION ===== */
+        .footer-marquee-wrap {
+            background: #f5b800;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 12px 0;
+            border-top: 1px solid #e0a800;
+            border-bottom: 1px solid #e0a800;
+        }
+
+        .footer-marquee {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        .footer-marquee span {
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-right: 40px;
+            text-transform: uppercase;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .site-footer {
+            background: #0a0a0a;
+            color: #ccc;
+            padding: 60px 40px 30px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            margin-bottom: 24px;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #f5b800;
+            font-style: italic;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .footer-logo span {
+            color: #fff;
+        }
+
+        .footer-signup h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-contact-info {
+            margin-bottom: 24px;
+            line-height: 1.6;
+            color: #aaa;
+        }
+
+        .footer-contact-info p {
+            margin: 0;
+        }
+
+        .footer-subscribe {
+            position: relative;
+            max-width: 320px;
+            margin-bottom: 30px;
+        }
+
+        .footer-subscribe input {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 14px 45px 14px 16px;
+            color: #fff;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .footer-subscribe input:focus {
+            border-color: #f5b800;
+        }
+
+        .footer-subscribe button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #222;
+            color: #fff;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .footer-subscribe button:hover {
+            background: #f5b800;
+            color: #000;
+        }
+
+        .footer-subscribe button svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-socials a {
+            color: #fff;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-socials a:hover {
+            color: #f5b800;
+        }
+
+        .footer-socials svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* SVG fixes for Stroke-based icons like X/Twitter */
+        .footer-socials .icon-stroke {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        .footer-col h5 {
+            color: #f5b800;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 14px;
+        }
+
+        .footer-col ul a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 60px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer-region {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .footer-region img {
+            width: 20px;
+            border-radius: 2px;
+        }
+
+        .footer-region svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-col-main {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-col-main {
+                grid-column: span 1;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2375,6 +2615,119 @@
             </button>
         </div>
     </section>
+
+    <!-- Footer Marquee -->
+    <div class="footer-marquee-wrap">
+        <div class="footer-marquee">
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <!-- Duplicated for seamless loop -->
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+            <span>One Million Athletes Served</span>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col footer-col-main">
+                <div class="footer-logo">ELITE</div>
+                <div class="footer-signup">
+                    <h4>Sign up for new stories and personal offers</h4>
+                </div>
+                <div class="footer-contact-info">
+                    <p>Los Angeles, California</p>
+                    <p>Phone: 855 793 3281</p>
+                </div>
+                <div class="footer-subscribe">
+                    <input type="email" placeholder="E-mail" aria-label="Email address">
+                    <button type="button" aria-label="Subscribe">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <!-- Facebook Icon -->
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)">
+                        <!-- X Icon -->
+                        <svg class="icon-stroke" viewBox="0 0 24 24"><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <!-- Instagram Icon -->
+                        <svg class="icon-stroke" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <!-- YouTube Icon -->
+                        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon fill="#000" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <!-- TikTok Icon -->
+                        <svg viewBox="0 0 24 24"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h5>Help</h5>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Returns & Exchange</a></li>
+                    <li><a href="#">Return Form</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">Product Care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Policies</h5>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Wholesale</h5>
+                <ul>
+                    <li><a href="#">Visit Website</a></li>
+                    <li><a href="#">Become a Member</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                &copy; 2026, Elite Sports . Powered by Shopify
+            </div>
+            <div class="footer-region">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag">
+                United States (USD $)
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
 
     <!-- Help Floating Button -->
     <button class="help-btn" id="help-btn">
